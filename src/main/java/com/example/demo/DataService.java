@@ -84,24 +84,24 @@ public class DataService {
 	}
 
 	public void setupDatabase() {
-//		try {
-//			Connection conn = generateConnection();
-//			executeSql(conn,
-//					"create table office (id int(2) primary key auto_increment, country char(25), city char(25) )");
-//
-//			executeSql(conn, "insert into office (country, city) values ('China','Shenzhen');");
-//			executeSql(conn, "insert into office (country, city) values ('India','Armrisar');");
-//			executeSql(conn, "insert into office (country, city) values ('Malaysia','Pengang');");
-//			executeSql(conn, "insert into office (country, city) values ('Sir Lanka','Galle');");
-//			executeSql(conn, "insert into office (country, city) values ('Japan','Matsusaka');");
-//			executeSql(conn, "insert into office (country, city) values ('Austria','Salzburg');");
-//			executeSql(conn, "insert into office (country, city) values ('Belgium','Antpur');");
-//
-//			//Bad practice, demo only
-//			conn.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Connection conn = generateConnection();
+			executeSql(conn,
+					"create table office (id int(2) primary key auto_increment, country char(25), city char(25) )");
+
+			executeSql(conn, "insert into office (country, city) values ('China','Shenzhen');");
+			executeSql(conn, "insert into office (country, city) values ('India','Armrisar');");
+			executeSql(conn, "insert into office (country, city) values ('Malaysia','Pengang');");
+			executeSql(conn, "insert into office (country, city) values ('Sir Lanka','Galle');");
+			executeSql(conn, "insert into office (country, city) values ('Japan','Matsusaka');");
+			executeSql(conn, "insert into office (country, city) values ('Austria','Salzburg');");
+			executeSql(conn, "insert into office (country, city) values ('Belgium','Antpur');");
+
+			//Bad practice, demo only
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public ArrayList<Office> queryOffice() throws Exception {
