@@ -71,7 +71,7 @@ public class DataService {
 	private Connection generateConnection() throws Exception {
 		Class.forName("com.mysql.jdbc.Driver");
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		String url = "jdbc:mysql://{0}:{1}/{2}?user={3}&password={4}";
+		String url = "jdbc:mysql://{0}:{1}/{2}?user={3}&password={4}&useSSL=false";
 		String connurl = MessageFormat.format(url, getDatebaseIp(), getDatebasePort(), getDatebaseName(),
 				getDatebaseUsername(), getDatebasePassword());
 		return DriverManager.getConnection(connurl);
@@ -128,3 +128,6 @@ public class DataService {
 
 	}
 }
+
+
+
